@@ -19,6 +19,8 @@
       - [Heuristic calculation procedure](#heuristic-calculation-procedure)
       - [Other functions/procedures](#other-functionsprocedures)
   - [Execution Results](#execution-results)
+    - [Output for a single run](#output-for-a-single-run)
+    - [Meterics for 300 runs](#meterics-for-300-runs)
   - [Source Code](#source-code)
 
 ## Introduction
@@ -228,6 +230,58 @@ int main()
 Responsible for taking the input from the user (number of queens), and calling the solver functions for each type and finally displaying metrics
 
 ## Execution Results
+
+### Output for a single run
+
+```
+Enter n value:
+8
+
+Initial board position:
+
+7 6 1 3 1 7 2 4
+
+===================================
+Steepest-ascent Hill climbing
+===================================
+Next move: 7 6 1 3 5 7 2 4
+Next move: 0 6 1 3 5 7 2 4
+failed to find solution
+
+===================================
+Hill climbing with Sideway Move
+===================================
+Next move: 7 6 1 3 5 7 2 4
+Next move: 0 6 1 3 5 7 2 4
+Next move: 0 6 1 7 5 7 2 4
+Next move: 0 6 1 7 5 3 2 4
+Next move: 0 6 1 7 5 3 0 4
+Next move: 2 6 1 7 5 3 0 4
+Success!
+
+===================================
+Random Restart WITHOUT Sideway Move
+===================================
+Next move: 1 5 2 0 2 3 3 6
+Next move: 1 5 2 0 7 3 3 6
+Next move: 1 5 2 0 7 3 1 6
+failed to find solution
+Next move: 4 1 4 0 3 0 7 5
+Next move: 4 1 4 6 3 0 7 5
+failed to find solution
+Next move: 5 2 6 3 3 7 1 2
+Next move: 5 2 6 3 0 7 1 2
+Next move: 5 2 6 3 0 7 1 4
+Success!
+Random Restart WITHOUT sideway moves executed Successfully!
+
+===================================
+Random Restart with Sideway Move
+===================================
+Random Restart with sideway Moves executed Successfully!
+```
+
+### Meterics for 300 runs
 
 ```
 Enter n value:
